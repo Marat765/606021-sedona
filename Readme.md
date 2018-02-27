@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марат Мизитов](https://up.htmlacademy.ru/htmlcss/20/user/606021).
-* Наставник: `Филипп Шамсиев`(https://up.htmlacademy.ru/htmlcss/20/user/70260).
+* Наставник: [Филипп Шамсиев](https://up.htmlacademy.ru/htmlcss/20/user/70260).
 
 ---
 
