@@ -81,6 +81,27 @@
       <span>Заинтересовались?</span>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
+      <form class="search-hotel-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="search-hotel-item">
+          <label for="search-hotel-arrival">Дата заезда:</label>
+          <input id="search-hotel-arrival" type="text" name="arrival" placeholder="24 апреля 2017" value="">
+          <button type="button"><img src="img/calendar.svg" alt="Календарь"></button>
+        </p>
+        <p class="search-hotel-item">
+          <label for="search-hotel-departure">Дата выезда:</label>
+          <input id="search-hotel-departure" type="text" name="departure" placeholder="4 июля 2017" value="">
+          <button type="button"><img src="img/calendar.svg" alt="Календарь"></button>
+        </p>
+        <p class="search-hotel-item">
+          <label for="search-hotel-adults">Взрослые:</label>
+          <input id="search-hotel-adults" type="text" name="adults" value="">
+        </p>
+        <p class="search-hotel-item">
+          <label for="search-hotel-children">Дети:</label>
+          <input id="search-hotel-children" type="text" name="children" value="">
+        </p>
+        <a href="#" class="button">Найти</a>
+      </form>
     </div>
     <div class="map">
       <img src="img/map.jpg" width="1200" height="593" alt="Карта окрестностей Седоны">
