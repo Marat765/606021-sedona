@@ -32,6 +32,43 @@
     <h1 class="visually-hidden">Выбор жилья</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр</h2>
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <p class="filter-item">
+            <input id="filter-pool" class="visually-hidden" type="checkbox" name="pool" checked>
+            <label for="filter-pool">Бассейн</label>
+          </p>
+          <p class="filter-item">
+            <input id="filter-parking" class="visually-hidden" type="checkbox" name="parking">
+            <label for="filter-parking">Парковка</label>
+          </p>
+          <p class="filter-item">
+            <input id="filter-wi-Fi" class="visually-hidden" type="checkbox" name="wi-Fi">
+            <label for="filter-wi-Fi">Wi-Fi</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <p class="filter-item">
+            <input id="filter-hotel" class="visually-hidden" type="checkbox" name="hotel" checked>
+            <label for="filter-hotel">Гостиница</label>
+          </p>
+          <p class="filter-item">
+            <input id="filter-motel" class="visually-hidden" type="checkbox" name="motel" checked>
+            <label for="filter-motel">Мотель</label>
+          </p>
+          <p class="filter-item">
+            <input id="filter-apartments" class="visually-hidden" type="checkbox" name="apartments" checked>
+            <label for="filter-apartments">Апартаменты</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (р.):</legend>
+
+        </fieldset>
+        <a href="#" class="">Показать</button>
+      </form>
     </section>
     <section class="searching-results">
       <h2 class="visually-hidden">Результаты поиска</h2>
@@ -40,21 +77,23 @@
         <span>Сортировка:</span>
         <ul class="sorting-option">
           <li>
-            <button>по цене</button>
+            <button type="button">по цене</button>
           </li>
           <li>
-            <button>по типу</button>
+            <button type="button">по типу</button>
           </li>
           <li>
-            <button>по рейтингу</button>
+            <button type="button">по рейтингу</button>
           </li>
         </ul>
         <ul class="sorting-direction">
           <li>
-            <button class="sort-ascending"></button>
+            <label for="sorting-ascending" class="visually-hidden">Сортировка по возрастанию</label>
+            <button id="sorting-ascending" type="button" class="sort-ascending"></button>
           </li>
           <li>
-            <button class="sort-descending"></button>
+            <label for="sorting-descending" class="visually-hidden">Сортировка по убыванию</label>
+            <button id="sorting-descending" type="button" class="sort-descending"></button>
           </li>
         </ul>
       </div>
