@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -67,7 +70,7 @@
           <legend>Стоимость в сутки (р.):</legend>
 
         </fieldset>
-        <button type="submit" class="button">Показать</button>
+        <button type="submit" class="button-filter">Показать</button>
       </form>
     </section>
     <section class="searching-results">
@@ -77,13 +80,13 @@
         <span>Сортировка:</span>
         <ul class="sorting-option">
           <li>
-            <button type="button">по цене</button>
+            <button class="button-sorting current-sorting" type="button">по цене</button>
           </li>
           <li>
-            <button type="button">по типу</button>
+            <button class="button-sorting" type="button">по типу</button>
           </li>
           <li>
-            <button type="button">по рейтингу</button>
+            <button class="button-sorting" type="button">по рейтингу</button>
           </li>
         </ul>
         <ul class="sorting-direction">
@@ -103,7 +106,7 @@
             <img src="img/photo-amara.jpg" width="135" height="90" alt="Фото">
           </div>
           <h3>
-            <a href="#">Amara Resort & Spa</a>
+            <a class="hotel-name" href="#">Amara Resort & Spa</a>
           </h3>
           <p>
             <span>гостиница</span>
@@ -126,7 +129,7 @@
             <img src="img/photo-desert.jpg" width="135" height="90" alt="Фото">
           </div>
           <h3>
-            <a href="#">Desert Quial Inn</a>
+            <a class="hotel-name" href="#">Desert Quial Inn</a>
           </h3>
           <p>
             <span>мотель</span>
@@ -148,7 +151,7 @@
             <img src="img/photo-villas.jpg" width="135" height="90" alt="Фото">
           </div>
           <h3>
-            <a href="#">Villas at Poco Diablo</a>
+            <a class="hotel-name" href="#">Villas at Poco Diablo</a>
           </h3>
           <p>
             <span>апартаменты</span>
