@@ -117,6 +117,7 @@ a {
 }
 
 .button-search {
+  font: inherit;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -170,6 +171,7 @@ a {
 }
 
 .button {
+  font: inherit;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -228,6 +230,7 @@ a {
 
   background-image: url(../img/filter-background.jpg);
   background-size: cover;
+  background-color: #4f5c67;
 }
 
 .filter fieldset {
@@ -242,6 +245,7 @@ a {
 }
 
 .filter .button-filter {
+  font: inherit;
   font-size: 14px;
   line-height: 21px;
   vertical-align: middle;
@@ -273,6 +277,7 @@ a {
 }
 
 .sorting .button-sorting {
+  font: inherit;
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
