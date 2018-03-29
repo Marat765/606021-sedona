@@ -10,17 +10,44 @@ body {
   text-transform: uppercase;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
 a {
   text-decoration: none;
 }
 
 .wrapper {
+  position: relative;
+
   width: 1200px;
 }
 
 .main-navigation {
+  position: relative;
+
   line-height: 26px;
   color: #000000;
+}
+
+.main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  display: block;
+  margin-left: -69px;
 }
 
 .site-navigation,
@@ -31,6 +58,25 @@ a {
 
   list-style: none;
 }
+
+.site-navigation {
+  display: flex;
+  padding: 15px 6%;
+}
+
+.site-navigation li {
+  width: 22.8%;
+}
+
+.site-navigation li:nth-child(2) {
+  margin-right: auto;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  text-align: right;
+}
+
 
 .site-navigation a {
   font-weight: bold;
@@ -48,17 +94,20 @@ a {
 
 .intro {
   height: 508 px;
-  margin-bottom: 60px;
 }
 
 .lead-block {
-  margin-bottom: 55px;
-  padding: 0 315px;
+  padding-top: 55px;
+  padding-bottom: 52px;
 
   text-align: center;
 }
 
 .lead-block b {
+  display: block;
+  width: 500px;
+  margin: 0 auto 27px auto;
+
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -66,32 +115,73 @@ a {
 }
 
 .lead-block p {
+  margin-bottom: 0;
+
   line-height: 26px;
 }
 
 .reason-special {
-  padding-top: 45px;
-  padding-bottom: 60px;
-
-  text-align: center;
+  display: flex;
 
   background-color: #81b3d2;
 }
 
-.reason-1 {
-  padding-right: 67%;
-
-  background-image: url(../img/photo-1.jpg);
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
+.reason-special-text {
+  text-align: center;
 }
 
-.reason-2 {
-  padding-left: 67%;
+.reason {
+  width: 33.3%;
+  padding-top: 32px;
+  padding-bottom: 60px;
+
+  text-align: center;
+}
+
+.reason h2 {
+  width: 40%;
+  margin-right: auto;
+  margin-bottom: 23px;
+  margin-left: auto;
+}
+
+.reason-number {
+  margin-bottom: 21px;
+}
+
+.explanation {
+  width: 305px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.other-reasons .explanation {
+  width: 280px;
+}
+
+.reason-special-image-1 {
+  width: 66.7%;
+
+  background-image: url(../img/photo-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.reason-special-image-2 {
+  order: -1;
+  width: 66.7%;
 
   background-image: url(../img/photo-2.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.reason h2 {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
 }
 
 .reason-special h2 {
@@ -109,13 +199,11 @@ a {
 
 .features {
   display: flex;
-  margin-bottom: 85px;
 }
 
 .feature-item {
-  width: 33%;
-  padding-right: 4.58%;
-  padding-left: 4.58%;
+  width: 33.3%;
+  padding-bottom: 85px;
 
   text-align: center;
 }
@@ -133,33 +221,22 @@ a {
 
 .other-reasons {
   display: flex;
-  margin-bottom: 55px;
-  padding-top: 50px;
-  padding-bottom: 60px;
 
   background-color: #eeeeee;
 }
 
-.reason {
-  width: 33%;
-  padding-right: 5.4%;
-  padding-left: 5.4%;
-
-  text-align: center;
-}
-
-.reason h2 {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  color: #000000;
-}
-
 .search-hotel {
+  position: relative;
+
+  padding-top: 50px;
+
   text-align: center;
 }
 
 .search-hotel span {
+  display: block;
+  margin-bottom: 25px;
+
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
@@ -167,10 +244,15 @@ a {
 }
 
 .search-hotel p {
+  margin-bottom: 46px;
+
   line-height: 24px;
 }
 
 .button-search {
+  width: 568px;
+  height: 86px;
+
   font: inherit;
   font-weight: bold;
   font-size: 21px;
@@ -193,6 +275,19 @@ a {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
+}
+
+.search-hotel-form {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+
+  width: 568px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  transform: translateX(-50%);
 }
 
 .search-label {
@@ -253,11 +348,22 @@ a {
   height: 593px;
 }
 
+.map img {
+  display: block;
+}
+
 .main-footer {
   display: flex;
   padding: 35px 0;
 
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer.footer-index {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
 }
 
 .main-footer .footer-hashtag {
@@ -357,6 +463,10 @@ a {
   color: #000000;
 }
 
+.sorting-block {
+  padding: 30px 6%;
+}
+
 .sorting {
   font-weight: normal;
   font-size: 12px;
@@ -391,7 +501,7 @@ a {
 }
 
 .hotel {
-  padding: 30px 70px;
+  padding: 30px 6%;
 }
 
 .hotel .hotel-name {
