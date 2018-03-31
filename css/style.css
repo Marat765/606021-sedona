@@ -93,12 +93,12 @@ img {
   color: #000000;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation a[href]:hover,
+.site-navigation a[href]:focus {
   color: #81b3d2;
 }
 
-.site-navigation a:active {
+.site-navigation a[href]:active {
   opacity: 0.3;
 }
 
@@ -204,6 +204,11 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+}
+
+.tdgf {
+  box-sizing: border-box;
+
 }
 
 .reason-special h2 {
@@ -386,6 +391,8 @@ img {
   height: 38px;
   padding-right: 12px;
   padding-left: 12px;
+  border: none;
+  border: 2px solid #f2f2f2;
 }
 
 .date div {
@@ -497,13 +504,20 @@ img {
   fill: #81b3d2;
 }
 
-.search-hotel input:hover {
+.search-hotel input:hover,
+.adults-number-minus:hover,
+.adults-number-plus:hover,
+.children-number-minus:hover,
+.children-number-plus:hover {
   background-color: #ebebeb;
+}
+
+.search-hotel input:hover {
+  border: 2px solid #ebebeb;
 }
 
 .search-hotel input:focus {
   background-color: #ffffff;
-  border: none;
   border: 2px solid #e5e5e5;
 }
 
@@ -585,13 +599,16 @@ img {
   background-color: #5496bd;
 }
 
+.main-footer .btn-social {
+  display: flex;
+}
+
 .main-footer .link-tw,
 .main-footer .link-yb {
   box-sizing: border-box;
   width: 46px;
   height: 48px;
   margin-right: 5px;
-  padding-top: 15px;
 
   text-align: center;
 
@@ -604,7 +621,6 @@ img {
   width: 46px;
   height: 48px;
   margin-right: 5px;
-  padding-top: 12px;
 
   text-align: center;
 
@@ -613,9 +629,10 @@ img {
 
 .main-footer .social-svg {
   fill: #ffffff;
+  margin: auto;
 }
 
-.main-footer .social-svg:active {
+.btn-social:active .social-svg {
   opacity: 0.3;
 }
 
