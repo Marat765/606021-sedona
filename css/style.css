@@ -105,12 +105,14 @@ img {
 }
 
 .intro {
-  height: 508 px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 508px;
   padding-top: 75px;
   padding-bottom: 78px;
 
   background-color: #414447;
-  background-image: url(../img/shape.png), url(../img/background-photo.jpg);
+  background-image: url("../img/shape.png"), url("../img/background-photo.jpg");
   background-repeat: no-repeat;
   background-position: bottom, center 28%;
 }
@@ -121,7 +123,7 @@ img {
 }
 
 .lead-block {
-  padding-top: 58px;
+  padding-top: 56px;
   padding-bottom: 52px;
 
   text-align: center;
@@ -189,7 +191,7 @@ img {
 .reason-special-image-1 {
   width: 66.7%;
 
-  background-image: url(../img/photo-1.jpg);
+  background-image: url("../img/photo-1.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -199,7 +201,7 @@ img {
   order: -1;
   width: 66.7%;
 
-  background-image: url(../img/photo-2.jpg);
+  background-image: url("../img/photo-2.jpg");
   background-position: center;
   background-size: cover;
 
@@ -265,15 +267,15 @@ img {
 }
 
 .feature-item:nth-child(1)::before {
-  background-image: url(../img/icon-accomodation.svg);
+  background-image: url("../img/icon-accomodation.svg");
 }
 
 .feature-item:nth-child(2)::before {
-  background-image: url(../img/icon-food.svg);
+  background-image: url("../img/icon-food.svg");
 }
 
 .feature-item:nth-child(3)::before {
-  background-image: url(../img/icon-souvenirs.svg);
+  background-image: url("../img/icon-souvenirs.svg");
 }
 
 .feature-item p {
@@ -435,11 +437,11 @@ img {
   border: none;
 }
 
-.date svg:hover path {
+.button-calendar:hover path {
   fill: #000000;
 }
 
-.date svg:active path {
+.button-calendar:active path {
   fill: #81b3d2;
 }
 
@@ -650,13 +652,6 @@ img {
 }
 
 .main-footer .btn-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main-footer .link-tw,
-.main-footer .link-yb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 46px;
@@ -666,6 +661,9 @@ img {
   text-align: center;
 
   background-color: #81b3d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 } 
 
 .main-footer .link-fb {
@@ -691,6 +689,7 @@ img {
 }
 
 .main-footer .footer-copyright {
+  margin-top: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,14 +706,18 @@ img {
   -ms-flex-pack: center;
 }
 
+.footer-copyright span {
+  margin-top: -2px;
+}
+
 .main-footer .footer-designed {
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .main-footer .developer-svg {
   width: 115px;
   height: 41px;
-  margin-left: 5px;
+  margin-left: 7px;
 
   fill: #000000;
 }
@@ -747,7 +750,7 @@ img {
   color: #ffffff;
 
   background-color: #4f5c67;
-  background-image: url(../img/filter-background.jpg);
+  background-image: url("../img/filter-background.jpg");
   background-size: cover;
 }
 
@@ -782,12 +785,12 @@ img {
   color: #ffffff;
 }
 
-fieldset p {
+.filter-fieldset p {
   margin-top: 0;
   margin-bottom: 25px;
 }
 
-fieldset label {
+.filter-fieldset label {
   position: relative;
 
   display: block;
@@ -828,6 +831,18 @@ fieldset label {
 }
 
 .checkbox:disabled + label::before {
+  content: "";
+  position: absolute;
+
+  width: 27px;
+  height: 24px;
+
+  background-image: url("../img/checkbox-off-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.checkbox[checked]:disabled + label::before {
   content: "";
   position: absolute;
 
@@ -976,6 +991,7 @@ fieldset label {
 .btn-transparent {
   display: block;
   margin: 0 auto;
+  margin-right: 95px;
   padding: 6px 35px;
 
   font-size: 14px;
@@ -1009,7 +1025,8 @@ fieldset label {
   display: -ms-flexbox;
   display: flex;
   align-items: baseline;
-  padding: 30px 6%;
+  padding: 31px 6%;
+  padding-top: 29px;
 
   border-bottom: 1px solid #e5e5e5;
 

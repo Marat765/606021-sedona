@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтр</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="filter-fieldset">
             <h3>Инфраструктура:</h3>
             <p class="filter-item">
               <input id="filter-pool" class="visually-hidden checkbox" type="checkbox" name="pool" checked>
@@ -52,7 +52,7 @@
               <label for="filter-wi-Fi">Wi-Fi</label>
             </p>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-fieldset">
             <h3>Тип жилья:</h3>
             <p class="filter-item">
               <input id="filter-hotel" class="visually-hidden checkbox" type="checkbox" name="hotel" checked>
@@ -107,7 +107,7 @@
             </ul>
             <ul class="sorting-direction">
               <li>
-                <label for="sorting-ascending" class="visually-hidden">Сортировка по возрастанию</label>
+                <span for="sorting-ascending" class="visually-hidden">Сортировка по возрастанию</span>
                 <button id="sorting-ascending" type="button" class="sort-ascending">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#cacaca" d="M5.5 0L0 10h11z" />
@@ -115,7 +115,7 @@
                 </button>
               </li>
               <li>
-                <label for="sorting-descending" class="visually-hidden">Сортировка по убыванию</label>
+                <span for="sorting-descending" class="visually-hidden">Сортировка по убыванию</span>
                 <button id="sorting-descending" type="button" class="sort-descending current-direction">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                     <path fill="#cacaca" d="M5.5 10L0 0h11" />
