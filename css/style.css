@@ -456,11 +456,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 458px;
-
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
 }
 
 .number-adults,
@@ -468,17 +467,15 @@ img {
   width: 50%;
 }
 
-.adults-button {
-  display: flex;
-}
-
 .children-label {
-  width: 100%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   padding-left: 20px;
 }
 
 .adults-label {
-  width: 50%;
+  width: 49%;
 
   text-align: left;
 }
@@ -486,17 +483,20 @@ img {
 .adults-button,
 .children-button {
   white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.children-button {
+  width: 114px;
 }
 
 .adults-number-input,
 .children-number-input {
-  margin-right: -4px;
-  margin-left: -4px;
+  margin-right: 0;
+  margin-left: 0;
   padding: 0;
-}
-
-.adults-number-input {
-  margin: 0;
 }
 
 .adults-number-input,
@@ -506,7 +506,7 @@ img {
 .children-number-minus,
 .children-number-plus {
   width: 38px;
-  height: 36px;
+  height: 38px;
 
   text-align: center;
 }
@@ -515,12 +515,12 @@ img {
 .children-number-minus,
 .adults-number-plus,
 .adults-number-minus {
-  padding-top: 9px;
-  padding-right: 14.2px;
-  padding-bottom: 9px;
-  padding-left: 14.2px;
-
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #818181;
+  width: 38px;
 
   background-color: #f2f2f2;
   border: none;
@@ -531,6 +531,7 @@ img {
 .adults-svg-plus,
 .children-svg-minus,
 .children-svg-plus {
+  margin: auto;
   vertical-align: middle;
 
   fill: #818181;
@@ -639,6 +640,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   justify-content: center;
   width: 33.3%;
 
@@ -807,6 +810,10 @@ img {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.filter-fieldset label:active {
+  outline: 1px solid #666;
 }
 
 .checkbox + label::before {
